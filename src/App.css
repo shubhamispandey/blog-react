@@ -1,38 +1,167 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  width: 100%;
+  height: 80px;
+  padding: 0px 30px;
+  background-color: #a0ffea;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.btn {
+  padding: 8px 18px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+  font-weight: 800;
+  font-size: 18px;
+  cursor: pointer;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.btn.btn-primary {
+  background-color: #ffffff;
+  border: 3px solid #0c0c0c;
+}
+.btn.btn-link {
+  background-color: transparent;
+  color: #5356ff;
+  font-weight: 400;
+  text-decoration: underline;
+}
+.btn.btn-success {
+  background-color: #01bb5e;
+  color: #fff;
+  margin-right: 20px;
+}
+.btn.btn-grey {
+  background-color: #eee;
+}
+.btn.btn-red {
+  background-color: #ff0544;
+  color: #ffffff;
+  margin-left: 20px;
+  font-size: 15px;
+}
+.btn.btn-card {
+  font-size: 15px;
+  background-color: #eee;
+  margin-left: 20px;
+}
+.posts {
+  width: 100%;
+  padding: 30px;
+  min-height: calc(100vh - 50px);
+  background-color: #eeeeee;
+}
+.post {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.post .post__title {
+  font-weight: 900;
+  font-size: 22px;
+}
+.post .post__content {
+  margin: 10px 0;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+}
+.post .post__category {
+  padding: 2px 8px 4px;
+  font-size: 16px;
+  background-color: #2693f8;
+  color: #fff;
+  border-radius: 15px;
+}
+.post .post__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.post .post__btns {
+  display: inline-block;
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(8px);
+  background-color: #0000001c;
+}
+.modal {
+  background-color: #fff;
+  width: 700px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  border-radius: 10px;
+}
+/* Form Styling */
+form .form-group {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  margin-bottom: 10px;
+}
+form .form-btn-group {
+  margin-top: 20px;
+}
+form .form-group label {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+form .form-group input {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid #dfdfdf;
+}
+.flex {
+  width: 100%;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  min-height: calc(100% - 80px);
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 800px) {
+  .modal {
+    width: 95%;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media (max-width: 600px) {
+  .modal {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+  }
+  form {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 450px) {
+  .btn.btn.btn-card {
+    margin-left: 8px;
+    padding: 8px 15px;
+  }
+}
+@media (max-width: 380px) {
+  .posts {
+    padding: 20px;
   }
 }

@@ -1,0 +1,14 @@
+[
+  {
+    "id": "1",
+    "title": "This is java",
+    "content": "You can control the values of more than one input field by adding a name attribute to each element. We will initialize our state with an empty object. To access the fields in the event handler use the event.target.name and event.target.value syntax.",
+    "category": "java"
+  },
+  {
+    "id": "2",
+    "title": "This is React",
+    "content": "You can control the values of more than one input field by adding a name attribute to each element. We will initialize our state with an empty object. To access the fields in the event handler use the event.target.name and event.target.value syntax.",
+    "category": "react"
+  }
+]
